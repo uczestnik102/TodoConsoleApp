@@ -1,0 +1,53 @@
+add
+aaa;2018-05-25
+add
+bbb;2018-06-26
+add
+ccc;2017-05-12
+add
+ddd;2017-04-05
+add
+eee;
+show
+
+add
+aaa;2018-06-05 15:50;2018-07-06 11:20;true,Zwyk³y
+add
+bbb;2018-07-05 17:20;2018-07-05 17:50;false;Pilne
+add
+ccc;2018-09-05 11:50;2018-09-05 14:00;true;Zwyk³y
+add
+ddd;2017-05-05 09:00;2017-05-05-16:00;true;Pilne
+show
+
+add
+bbb;2018-07-05 17:20;2018-07-05 17:50;Pilne
+add
+Egzamin z modu³u 3;2018-07-05 17:20;2018-07-05 17:50;Zwyk³y
+add
+Sprz¹tanie domu;2018-07-05 17:20;Pilne
+add
+bbb;2018-07-05 17:20;2018-07-05 17:50;Pilne
+add
+Œwi¹teczne zakupy;2018-07-05 17:20;2018-07-05 17:50;Zwyk³y
+add
+12345678901234567890;2018-07-05 17:20;Pilne
+add
+12345678901234567890123467890;2018-07-05 17:20;2018-07-05 17:50;Pilne
+add
+bfgdhddhddhbb;2018-07-05 17:20;2018-07-05 17:50;Zwyk³y
+add
+bbb;2018-07-05 17:20;Pilne
+show
+
+SHOW
+
+add
+bbb;2018-07-05 17:20;Pilne
+show
+
+
+add
+aaa;2008, 3, 1, 7, 0, 0
+
+2018-05-05 15:50

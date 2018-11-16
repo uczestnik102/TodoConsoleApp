@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D0EE06E2-2081-4226-942F-5EB50E3C5EF4}</ProjectGuid>
+    <ProjectGuid>{38D3F4D7-09D4-4AB0-ADBD-25A3BC3C0023}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ConsoleTaskManager</RootNamespace>
-    <AssemblyName>ConsoleTaskManager</AssemblyName>
+    <RootNamespace>Consol_tas_z_bledem</RootNamespace>
+    <AssemblyName>Consol_tas_z_bledem</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,11 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConsoleEx.cs" />
-    <Compile Include="Priority.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TaskModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

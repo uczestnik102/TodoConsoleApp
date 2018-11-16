@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.28107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleTaskManager", "ConsoleTaskManager\ConsoleTaskManager.csproj", "{D0EE06E2-2081-4226-942F-5EB50E3C5EF4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTime", "DataTime\DataTime.csproj", "{6E504DFF-B461-4AB5-A00C-73EF5B007AE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KAmi", "KAmi\KAmi.csproj", "{BB56E189-0C81-4BCF-8134-8F06AC94453A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{D0EE06E2-2081-4226-942F-5EB50E3C5EF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0EE06E2-2081-4226-942F-5EB50E3C5EF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0EE06E2-2081-4226-942F-5EB50E3C5EF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E504DFF-B461-4AB5-A00C-73EF5B007AE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E504DFF-B461-4AB5-A00C-73EF5B007AE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E504DFF-B461-4AB5-A00C-73EF5B007AE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E504DFF-B461-4AB5-A00C-73EF5B007AE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB56E189-0C81-4BCF-8134-8F06AC94453A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB56E189-0C81-4BCF-8134-8F06AC94453A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB56E189-0C81-4BCF-8134-8F06AC94453A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB56E189-0C81-4BCF-8134-8F06AC94453A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
