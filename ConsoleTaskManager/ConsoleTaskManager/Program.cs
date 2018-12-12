@@ -34,13 +34,14 @@ namespace ConsoleTaskManager
                 }
 
                 else if (command == "removetask" || command == "remove" || command == "2")
-                { }
-                //{ RemoveTaskCommand(); }
+                {
+                    RemoveTaskCommand(taskMenagerList);
+                }
 
                 else if (command == "showtask" || command == "show" || command == "3")
 
                 {
-                    ShowTaskCommand(taskMenagerList);
+                    SortTaskCommand(taskMenagerList);
                 }
 
                 else if (command == "loadtask" || command == "load" || command == "4")
@@ -151,9 +152,127 @@ namespace ConsoleTaskManager
 
 
 
+
+        //public static void SortTaskCommand(List<TaskModel> taskMenagerList)
+        //{
+
+        //    Console.Write("Czy chcesz posortować zadania przed wyświetleniem? (Tak/Nie): ");
+        //    string sortOrNot = Console.ReadLine();
+        //    {
+        //        if (sortOrNot.ToLower() == "tak")
+        //        {
+        //            Console.Write("Wybierz sposób sortowania: \n wg zbliżającego się czasu zakończenia zadania (1) \n wg pilności zadania (2) \n");
+        //            int sortMethod = Int32.Parse(Console.ReadLine());
+        //            switch (sortMethod)
+        //            {
+        //                case 1:
+        //                    ShowTaskCommand(new List<TaskModel>(taskMenagerList.OrderBy(x=>x.EndingDate)));
+        //                    break;
+        //                case 2:
+        //                    ShowTaskCommand(new List<TaskModel>(taskMenagerList.OrderBy(x => x.Weight)));
+        //                    break;
+        //            }
+        //        }else if (sortOrNot.ToLower() == "nie")
+        //        {
+        //            ShowTaskCommand(taskMenagerList);
+        //        }
+        //        else
+        //        {
+        //            SortTaskCommand(taskMenagerList);
+        //        }
+        //    }
+        //}
+
+
+        public static void RemoveTaskCommand(List<TaskModel> taskMenagerList)
+        {
+            ShowTaskCommand(taskMenagerList);
+            Console.Write("Podaj numer ID zadania do usunięcia: ");
+            int toRemove = Convert.ToInt32(Console.ReadLine());
+            if (toRemove > 0 && toRemove <= taskMenagerList.Count)
+            {
+                Console.Write($"Czy na pewno chesz usunąć zadanie nr {toRemove} (T/N): ");
+                string confirm = Console.ReadLine().ToLower();
+                if (confirm == "t")
+                {
+                    taskMenagerList.RemoveAt(toRemove-1);
+                    Console.WriteLine($"Usunięto zadanie nr {toRemove}.");
+                }
+                else
+                {
+                    return;
+                }
+
+            }
+            else
+            {
+                Console.Write("Podano niepoprawną wartość ID: ");
+                RemoveTaskCommand(taskMenagerList);
+            }
+        }
+
+
+
+
+        public static void SortTaskCommand(List<TaskModel> taskMenagerList)
+        {
+            // Console.Clear();
+
+            Console.Write("Wybierz sposób sortowania: " +
+                              "\n wg kolejności dodawania zadań (1) " +
+                              "\n wg zbliżającego się czasu zakończenia zadania (2) " +
+                              "\n wg pilności zadania (3) \n"
+                          ); int sortMethod = Int32.Parse(Console.ReadLine());
+            switch (sortMethod)
+            {
+                case 1:
+                    ShowTaskCommand(taskMenagerList);
+                    break;
+                case 2:
+                    Console.WriteLine("AA");
+                    ShowTaskCommand(new List<TaskModel>(taskMenagerList.OrderBy(x => x.EndingDate)));//linku nie działa od razu tylko jak sie uzyje
+                    break;
+                case 3:
+                    ShowTaskCommand(taskMenagerList.OrderByDescending(x => x.Weight).ToList());
+                    break;
+                default:
+                    Console.WriteLine("Ff");
+                    break;
+            }
+
+        }
+
+
+        //public static void SortTaskCommand(List<TaskModel> taskMenagerList)
+        //{
+
+        //    Console.Write("Wybierz sposób sortowania: " +
+        //                  "\n wg kolejności dodawania zadań (1) " +
+        //                  "\n wg zbliżającego się czasu zakończenia zadania (2) " +
+        //                  "\n wg pilności zadania (3) \n");
+        //    int sortMethod = Int32.Parse(Console.ReadLine());
+        //    switch (sortMethod)
+        //    {
+        //        case 1:
+        //            ShowTaskCommand(taskMenagerList);
+        //            break;
+        //        case 2:
+        //            ShowTaskCommand(new List<TaskModel>(taskMenagerList.OrderBy(x => x.EndingDate)));
+        //            break;
+        //        case 3:
+        //            ShowTaskCommand(new List<TaskModel>(taskMenagerList.OrderBy(x => x.Weight)));
+        //            break;
+        //    }
+
+        //   SortTaskCommand(taskMenagerList);
+
+
+
         public static void ShowTaskCommand(List<TaskModel> taskMenagerList)
         {
             Console.Clear();
+
+            var listalis = taskMenagerList.OrderBy(x => x.Weight);
 
             Console.WriteLine(" _________________________________________________________________________________________________________________");
             Console.WriteLine("|                                     |                     |                      |                    |         |");
@@ -163,7 +282,8 @@ namespace ConsoleTaskManager
             var index = 0;
             foreach (var row in taskMenagerList)
             //foreach (var row in taskMenagerList.OrderBy(x => x.Weight))
-                {
+            //foreach (var row in listalis)
+            {
                 index++;
 
                 if (row.Weight.ToString() == "Pilne")
@@ -197,6 +317,7 @@ namespace ConsoleTaskManager
                     ConsoleEx.Write(row.Weight.ToString(), ConsoleColor.DarkRed);
                     Console.WriteLine("  |");
                     Console.WriteLine("|-------------------------------------+---------------------+----------------------+--------------------+---------|");
+
                 }
                 else
                 {
@@ -288,7 +409,7 @@ namespace ConsoleTaskManager
 
                 taskMenagerList.Add(task);
                 counter++;
-            
+
             }
             Console.WriteLine($"Liczba wczytanych zadań: {counter}");
 

@@ -4,12 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Consol_tas_z_bledem
+namespace ConsoleTaskManager
 {
-    class Program
+    class Methods
     {
-        static void Main(string[] args)
-        {
-        }
     }
 }
